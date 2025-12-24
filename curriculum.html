@@ -1,9 +1,127 @@
-<header>
-  <h1>Natalia Corchón</h1>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="acerca.html">Acerca de mí</a>
-    <a href="curriculum.html">Currículum</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
-</header>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Natalia Corchón - Currículum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #111827;
+      background: #f3f4f6;
+    }
+
+    header {
+      background: #111827;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 0.95rem;
+    }
+    nav a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+    h2 {
+      margin-top: 0;
+    }
+
+    .cv-block {
+      background: #ffffff;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      margin-bottom: 2rem;
+    }
+    .cv-block a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .cv-block a:hover {
+      text-decoration: underline;
+    }
+
+    .video-wrapper {
+      margin-top: 1rem;
+    }
+    video {
+      max-width: 100%;
+      border-radius: 0.5rem;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      nav a {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Natalia Corchón</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="acerca.html">Acerca de mí</a>
+      <a href="curriculum.html">Currículum</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Currículum</h2>
+
+    <section class="cv-block">
+      <h3>CV en PDF</h3>
+      <p>
+        Puedes descargar mi currículum actualizado en formato PDF:
+        <a href="CV_NataliaCorchónRuiz.pdf" target="_blank" rel="noopener">
+          Descargar CV de Natalia Corchón (PDF)
+        </a>
+      </p>
+    </section>
+
+    <section class="cv-block">
+      <h3>Vídeo‑CV</h3>
+      <p>
+        A continuación puedes ver mi vídeo‑CV, donde explico de forma más visual mi
+        formación, experiencia y objetivos profesionales.
+      </p>
+
+      <div class="video-wrapper">
+        <video controls>
+          <source src="VCV_2.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de vídeo.
+        </video>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
