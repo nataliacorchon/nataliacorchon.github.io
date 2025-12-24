@@ -1,10 +1,159 @@
-<header>
-  <h1>Natalia Corchón</h1>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="acerca.html">Acerca de mí</a>
-    <a href="curriculum.html">Currículum</a>
-    <a href="contacto.html">Contacto</a>
-  </nav>
-</header>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Natalia Corchón - Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #111827;
+      background: #f3f4f6;
+    }
+
+    /* Barra de navegación */
+    header {
+      background: #111827;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 0.95rem;
+    }
+    nav a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* Contenido principal */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+    .hero-title {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero-subtitle {
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 0.75rem;
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+    .card p {
+      margin: 0.25rem 0 0.5rem;
+      color: #4b5563;
+    }
+    .card a {
+      color: #2563eb;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      nav a {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegación común -->
+  <header>
+    <h1>Natalia Corchón</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="acerca.html">Acerca de mí</a>
+      <a href="curriculum.html">Currículum</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+    <p class="hero-title">Estudiante de Ingeniería y Sistemas de Datos</p>
+    <p class="hero-subtitle">
+      Esta es mi página personal para integrar mi marca digital: CV, vídeo‑CV, redes
+      y mis intereses en ingeniería de datos.
+    </p>
+
+    <div class="cards">
+      <section class="card">
+        <h2>Acerca de mí</h2>
+        <p>Conoce quién soy, qué estudio y cuáles son mis objetivos profesionales.</p>
+        <a href="acerca.html">Ver sección &rarr;</a>
+      </section>
+
+      <section class="card">
+        <h2>Currículum</h2>
+        <p>Accede a mi CV en PDF y a mi vídeo‑CV con más detalles sobre mi perfil.</p>
+        <a href="curriculum.html">Ver currículum &rarr;</a>
+      </section>
+
+      <section class="card">
+        <h2>Contacto</h2>
+        <p>Si quieres ponerte en contacto conmigo o ver mis redes profesionales.</p>
+        <a href="contacto.html">Ir a contacto &rarr;</a>
+      </section>
+
+      <section class="card">
+        <h2>Proyectos / Blog</h2>
+        <p>Espacio para compartir pequeños proyectos o entradas sobre ingeniería de datos.</p>
+        <!-- Más adelante puedes enlazar a un blog o a otra página -->
+        <!-- <a href="blog.html">Ver blog &rarr;</a> -->
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Natalia Corchón · Sitio personal en GitHub Pages
+  </footer>
+
+</body>
+</html>
