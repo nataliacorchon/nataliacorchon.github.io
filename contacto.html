@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact me - Natalia Corchón</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #111827;
+      background: #ffffff;
+    }
+
+    /* Barra superior sencilla */
+    header {
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    nav a {
+      color: #4b5563;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 0.95rem;
+    }
+    nav a:hover {
+      color: #111827;
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    /* Banda grande "Contact me" */
+    .hero-contact {
+      background: #111827;
+      color: #ffffff;
+      padding: 3rem 2rem;
+      margin-bottom: 3rem;
+    }
+    .hero-contact h2 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+
+    /* Columna izquierda: texto + formulario */
+    form {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    input, textarea {
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.25rem;
+      font: inherit;
+    }
+    textarea {
+      min-height: 120px;
+    }
+    button {
+      align-self: flex-start;
+      padding: 0.6rem 1.4rem;
+      border-radius: 0.25rem;
+      border: none;
+      background: #111827;
+      color: #ffffff;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #000000;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+
+    /* Columna derecha: CV + links */
+    .side-block {
+      font-size: 0.95rem;
+    }
+    .side-block a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .side-block a:hover {
+      text-decoration: underline;
+    }
+    .side-block ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0.25rem 0 0;
+    }
+    .side-block li {
+      margin-bottom: 0.25rem;
+    }
+
+    footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Natalia Corchón</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="index.html#acerca">Acerca de mí</a>
+      <a href="index.html#curriculum">Currículum</a>
+      <a href="index.html#proyectos">Proyectos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-contact">
+      <h2>Contact me</h2>
+    </section>
+
+    <section class="grid">
+      <!-- Columna izquierda -->
+      <div>
+        <h3>Feel free to contact me</h3>
+        <p>
+          If you are interested in cooperation or would like to discuss anything related
+          to data engineering or analytics, please contact me.
+        </p>
+        <p class="note">
+          Este formulario es solo demostrativo, no envía mensajes reales.
+        </p>
+
+        <form>
+          <input type="text" placeholder="Name">
+          <input type="email" placeholder="E-mail">
+          <textarea placeholder="Message"></textarea>
+          <button type="button">Send</button>
+        </form>
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="side-block">
+        <h3>CV</h3>
+        <p>
+          <a href="CV_NataliaCorchónRuiz.pdf" target="_blank" rel="noopener">Download PDF</a>
+        </p>
+
+        <h3>Links</h3>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/nataliacorrchonruiz" target="_blank">linkedin</a>
+          </li>
+          <li>
+            <a href="https://github.com/nataliacorchon" target="_blank">github</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Natalia Corchón
+  </footer>
+
+</body>
+</html>
