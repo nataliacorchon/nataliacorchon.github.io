@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Natalia Corchón - Inicio</title>
+  <title>Natalia Corchón - Estudiante de Ingeniería y Sistemas de Datos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -16,6 +16,9 @@
 
     /* Barra de navegación */
     header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
       background: #111827;
       color: #fff;
       padding: 0.75rem 1.5rem;
@@ -38,55 +41,145 @@
       text-decoration: underline;
     }
 
-    /* Contenido principal */
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 3rem 1.5rem 4rem;
     }
-    .hero-title {
+
+    section {
+      margin-bottom: 3.5rem;
+    }
+    section h2 {
+      margin-top: 0;
+      color: #111827;
+    }
+
+    /* Inicio / héroe */
+    #inicio {
+      padding-top: 2rem;
+      text-align: left;
+    }
+    #inicio h2 {
       font-size: 2rem;
       margin-bottom: 0.5rem;
     }
-    .hero-subtitle {
+    #inicio p {
+      margin: 0.2rem 0;
       color: #4b5563;
-      margin-bottom: 1.5rem;
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
+    /* Acerca de mí */
+    .about-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
     }
-    .card {
+    .about-text {
+      flex: 2 1 260px;
+    }
+    .about-photo {
+      flex: 1 1 200px;
+      text-align: center;
+    }
+    .about-photo img {
+      max-width: 220px;
+      border-radius: 50%;
+      border: 3px solid #e5e7eb;
+    }
+
+    /* Currículum */
+    .cv-block {
       background: #ffffff;
       border-radius: 0.75rem;
-      padding: 1.25rem 1.5rem;
+      padding: 1.5rem;
       box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      margin-bottom: 1.5rem;
     }
-    .card h2 {
-      margin-top: 0;
-      font-size: 1.1rem;
-    }
-    .card p {
-      margin: 0.25rem 0 0.5rem;
-      color: #4b5563;
-    }
-    .card a {
+    .cv-block a {
       color: #2563eb;
       text-decoration: none;
-      font-size: 0.9rem;
     }
-    .card a:hover {
+    .cv-block a:hover {
+      text-decoration: underline;
+    }
+    .video-wrapper {
+      margin-top: 1rem;
+    }
+    video, iframe {
+      max-width: 100%;
+      border-radius: 0.5rem;
+    }
+
+    /* Proyectos */
+    .project-list {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+    .project-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Contacto (parte central antes del footer) */
+    .contact-inline p {
+      margin: 0.25rem 0;
+    }
+    .contact-inline a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .contact-inline a:hover {
       text-decoration: underline;
     }
 
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.85rem;
-      color: #6b7280;
+    /* Footer tipo portfolio */
+    .footer {
+      background: #000000;
+      color: #f9fafb;
+      padding: 2.5rem 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .footer h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+    .footer span {
+      font-weight: 400;
+    }
+    .footer a {
+      color: #e5e7eb;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .footer-right form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+    }
+    .footer-right input {
+      flex: 1 1 180px;
+      padding: 0.6rem 0.8rem;
+      border-radius: 999px;
+      border: none;
+      background: #111827;
+      color: #f9fafb;
+    }
+    .footer-right button {
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      border: none;
+      background: #f9fafb;
+      color: #111827;
+      cursor: pointer;
+    }
+    .footer-right button:hover {
+      background: #e5e7eb;
     }
 
     @media (max-width: 640px) {
@@ -104,55 +197,138 @@
 </head>
 <body>
 
-  <!-- Barra de navegación común -->
+  <!-- Barra de navegación -->
   <header>
     <h1>Natalia Corchón</h1>
     <nav>
-      <a href="index.html">Inicio</a>
-      <a href="acerca.html">Acerca de mí</a>
-      <a href="curriculum.html">Currículum</a>
-      <a href="contacto.html">Contacto</a>
+      <a href="#inicio">Inicio</a>
+      <a href="#acerca">Acerca de mí</a>
+      <a href="#curriculum">Currículum</a>
+      <!-- <a href="#proyectos">Proyectos</a> -->
+      <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
-  <!-- Contenido principal -->
   <main>
-    <p class="hero-title">Estudiante de Ingeniería y Sistemas de Datos</p>
-    <p class="hero-subtitle">
-      Esta es mi página personal para integrar mi marca digital: CV, vídeo‑CV, redes
-      y mis intereses en ingeniería de datos.
-    </p>
+    <!-- INICIO -->
+    <section id="inicio">
+      <h2>Estudiante de Ingeniería y Sistemas de Datos</h2>
+      <p>Apasionada por la ingeniería de datos, el aprendizaje automático y la comunicación técnica.</p>
+      <p>En esta página integro mi currículum, vídeo‑CV, redes y proyectos como parte de mi marca personal.</p>
+    </section>
 
-    <div class="cards">
-      <section class="card">
-        <h2>Acerca de mí</h2>
-        <p>Conoce quién soy, qué estudio y cuáles son mis objetivos profesionales.</p>
-        <a href="acerca.html">Ver sección &rarr;</a>
-      </section>
+    <!-- ACERCA DE MÍ -->
+    <section id="acerca">
+      <h2>Acerca de mí</h2>
+      <div class="about-wrapper">
+        <div class="about-text">
+          <p>
+            Soy Natalia Corchón, estudiante de Ingeniería y Sistemas de Datos. Me interesa todo el ciclo de vida
+            del dato: desde la captura y el modelado hasta el análisis y la visualización.
+          </p>
+          <p>
+            Disfruto aprendiendo tecnologías nuevas, preparando presentaciones claras y trabajando en equipo para
+            resolver problemas reales con datos.
+          </p>
+          <p>
+            Esta web recoge los elementos principales de mi marca personal como futura ingeniera de datos.
+          </p>
+        </div>
+        <div class="about-photo">
+          <!-- Cambia foto_natalia.jpg por el nombre real de tu foto -->
+          <img src="foto_natalia.jpg" alt="Foto">
+        </div>
+      </div>
+    </section>
 
-      <section class="card">
-        <h2>Currículum</h2>
-        <p>Accede a mi CV en PDF y a mi vídeo‑CV con más detalles sobre mi perfil.</p>
-        <a href="curriculum.html">Ver currículum &rarr;</a>
-      </section>
+    <!-- CURRÍCULUM -->
+    <section id="curriculum">
+      <h2>Currículum</h2>
 
-      <section class="card">
-        <h2>Contacto</h2>
-        <p>Si quieres ponerte en contacto conmigo o ver mis redes profesionales.</p>
-        <a href="contacto.html">Ir a contacto &rarr;</a>
-      </section>
+      <div class="cv-block">
+        <h3>CV en PDF</h3>
+        <p>
+          Puedes descargar mi currículum actualizado en formato PDF:
+          <a href="CV_NataliaCorchónRuiz.pdf" target="_blank" rel="noopener">
+            Descargar mi CV (PDF)
+          </a>
+        </p>
+      </div>
 
-      <section class="card">
-        <h2>Proyectos / Blog</h2>
-        <p>Espacio para compartir pequeños proyectos o entradas sobre ingeniería de datos.</p>
-        <!-- Más adelante puedes enlazar a un blog o a otra página -->
-        <!-- <a href="blog.html">Ver blog &rarr;</a> -->
-      </section>
-    </div>
+      <div class="cv-block">
+        <h3>Vídeo‑CV</h3>
+        <p>
+          A continuación puedes ver mi vídeo‑CV, donde explico de forma más visual mi formación y mis objetivos.
+        </p>
+
+        <div class="video-wrapper">
+          <video controls>
+            <source src="VCV_2.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de vídeo.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS / INTERESES -->
+    <section id="proyectos">
+      <h2>Proyectos e intereses</h2>
+      <ul class="project-list">
+        <li>
+          Pequeños proyectos de análisis de datos en Python (pandas, scikit‑learn) aplicados a conjuntos de datos reales.
+        </li>
+        <li>
+          Interés en diseño de pipelines de datos y orquestación (por ejemplo, Airflow o herramientas similares).
+        </li>
+        <li>
+          Aprendizaje continuo de buenas prácticas de software, control de versiones y documentación técnica.
+        </li>
+      </ul>
+    </section>
+
+    <!-- CONTACTO (antes del footer) -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <div class="contact-inline">
+        <p><strong>Email:</strong> natalia.corchon.ruiz@gmail.com</p>
+        <p>
+          <strong>LinkedIn:</strong>
+          <a href="https://www.linkedin.com/in/nataliacorchonruiz" target="_blank">
+            linkedin.com/in/nataliacorchonruiz
+          </a>
+        </p>
+        <p>
+          <strong>GitHub:</strong>
+          <a href="https://github.com/nataliacorchon" target="_blank">
+            github.com/nataliacorchon
+          </a>
+        </p>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    © 2025 Natalia Corchón · Sitio personal en GitHub Pages
+  <!-- FOOTER ESTILO PORTFOLIO -->
+  <footer class="footer">
+    <div class="footer-left">
+      <h3>Natalia <span>Corchón</span></h3>
+      <p>Madrid, España</p>
+      <p>natalia.corchon.ruiz@gmail.com</p>
+      <p>
+        <a href="https://www.linkedin.com/in/nataliacorchonruiz" target="_blank">linkedin</a> ·
+        <a href="https://github.com/nataliacorchon" target="_blank">github</a>
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h3>Stay tuned</h3>
+      <p>
+        Este cuadro de suscripción es solo demostrativo, como parte de mi marca personal.
+      </p>
+      <form>
+        <input type="email" placeholder="Tu email (no se enviará nada)">
+        <button type="button">Subscribe</button>
+      </form>
+    </div>
   </footer>
 
 </body>
