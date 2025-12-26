@@ -121,19 +121,25 @@
       margin-bottom: 0.5rem;
     }
 
-    /* Contacto (parte central antes del footer) */
+    /* Contacto (antes del footer) */
     .contact-inline p {
       margin: 0.25rem 0;
     }
-    .contact-inline a {
-      color: #2563eb;
-      text-decoration: none;
+
+    /* ICONOS REDES */
+    .social-icons {
+      margin-top: 0.5rem;
     }
-    .contact-inline a:hover {
-      text-decoration: underline;
+    .social-icons a {
+      display: inline-block;
+      margin-right: 0.6rem;
+    }
+    .social-icons img {
+      width: 26px;
+      height: 26px;
     }
 
-    /* Footer tipo portfolio */
+    /* Footer */
     .footer {
       background: #000000;
       color: #f9fafb;
@@ -144,18 +150,8 @@
       margin-top: 0;
       margin-bottom: 0.5rem;
     }
-    .footer-center span {
-      font-weight: 400;
-    }
     .footer-center p {
       margin: 0.25rem 0;
-    }
-    .footer h3 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-    }
-    .footer span {
-      font-weight: 400;
     }
     .footer a {
       color: #e5e7eb;
@@ -167,6 +163,10 @@
     .footer-note {
       font-size: 0.9rem;
       color: #9ca3af;
+    }
+    .footer .social-icons img {
+      width: 24px;
+      height: 24px;
     }
 
     @media (max-width: 640px) {
@@ -223,7 +223,6 @@
           </p>
         </div>
         <div class="about-photo">
-          <!-- Cambia foto_natalia.jpg por el nombre real de tu foto -->
           <img src="foto_natalia.jpg" alt="Foto">
         </div>
       </div>
@@ -279,37 +278,39 @@
       <h2>Contacto</h2>
       <div class="contact-inline">
         <p><strong>Email:</strong> natalia.corchon.ruiz@gmail.com</p>
-        <p>
-          <strong>LinkedIn:</strong>
+
+        <div class="social-icons">
+          <!-- Icono LinkedIn -->
           <a href="https://www.linkedin.com/in/nataliacorchonruiz" target="_blank">
-            linkedin.com/in/nataliacorchonruiz
+            <img src="icon_linkedin.svg" alt="LinkedIn de Natalia Corchón">
           </a>
-        </p>
-        <p>
-          <strong>GitHub:</strong>
+          <!-- Icono GitHub -->
           <a href="https://github.com/nataliacorchon" target="_blank">
-            github.com/nataliacorchon
+            <img src="icon_github.svg" alt="GitHub de Natalia Corchón">
           </a>
-        </p>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER ESTILO PORTFOLIO -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-center">
       <h3>Natalia Corchón</h3>
       <p>Madrid, España</p>
-      <p>
-        <a href="https://www.linkedin.com/in/nataliacorchonruiz" target="_blank">linkedin</a> ·
-        <a href="https://github.com/nataliacorchon" target="_blank">github</a>
-      </p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/nataliacorchonruiz" target="_blank">
+          <img src="icon_linkedin.svg" alt="LinkedIn de Natalia Corchón">
+        </a>
+        <a href="https://github.com/nataliacorchon" target="_blank">
+          <img src="icon_github.svg" alt="GitHub de Natalia Corchón">
+        </a>
+      </div>
       <p class="footer-note">
         Sitio personal creado como parte de mi marca profesional en ingeniería de datos.
       </p>
     </div>
   </footer>
-
 
 </body>
 </html>
