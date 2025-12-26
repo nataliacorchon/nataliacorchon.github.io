@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    html {
+      scroll-behavior: smooth; /* Scroll suave para anchors */
+    }
+
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -35,6 +39,7 @@
       text-decoration: none;
       margin-left: 1rem;
       font-size: 0.95rem;
+      cursor: pointer;
     }
     nav a:hover {
       color: #ffffff;
@@ -169,6 +174,17 @@
       height: 24px;
     }
 
+    /* ANIMACIÓN aparición al hacer scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     @media (max-width: 640px) {
       header {
         flex-direction: column;
@@ -222,7 +238,7 @@
             Esta web recoge los elementos principales de mi marca personal como futura ingeniera de datos.
           </p>
         </div>
-        <div class="about-photo">
+        <div class="about-photo reveal">
           <img src="foto_natalia.jpg" alt="Foto">
         </div>
       </div>
@@ -242,7 +258,7 @@
         </p>
       </div>
 
-      <div class="cv-block">
+      <div class="cv-block reveal">
         <h3>Vídeo‑CV</h3>
         <p>
           A continuación puedes ver mi vídeo‑CV, donde explico de forma más visual mi formación y mis objetivos.
@@ -261,13 +277,13 @@
     <section id="proyectos">
       <h2>Proyectos e intereses</h2>
       <ul class="project-list">
-        <li>
+        <li class="reveal">
           Pequeños proyectos de análisis de datos en Python (pandas, scikit‑learn) aplicados a conjuntos de datos reales.
         </li>
-        <li>
+        <li class="reveal">
           Interés en diseño de pipelines de datos y orquestación (por ejemplo, Airflow o herramientas similares).
         </li>
-        <li>
+        <li class="reveal">
           Aprendizaje continuo de buenas prácticas de software, control de versiones y documentación técnica.
         </li>
       </ul>
@@ -276,15 +292,13 @@
     <!-- CONTACTO (antes del footer) -->
     <section id="contacto">
       <h2>Contacto</h2>
-      <div class="contact-inline">
+      <div class="contact-inline reveal">
         <p><strong>Email:</strong> natalia.corchon.ruiz@gmail.com</p>
 
         <div class="social-icons">
-          <!-- Icono LinkedIn -->
           <a href="https://www.linkedin.com/in/nataliacorchonruiz" target="_blank">
             <img src="icon_linkedin.png" alt="LinkedIn de Natalia Corchón">
           </a>
-          <!-- Icono GitHub -->
           <a href="https://github.com/nataliacorchon" target="_blank">
             <img src="icon_github.png" alt="GitHub de Natalia Corchón">
           </a>
@@ -298,7 +312,7 @@
     <div class="footer-center">
       <h3>Natalia Corchón</h3>
       <p>Madrid, España</p>
-      <div class="social-icons">
+      <div class="social-icons reveal">
         <a href="https://www.linkedin.com/in/nataliacorchonruiz" target="_blank">
           <img src="icon_linkedin_2.png" alt="LinkedIn de Natalia Corchón">
         </a>
@@ -307,9 +321,27 @@
         </a>
       </div>
       <p class="footer-note">
-      © 2025 Natalia Corchón
+        © 2025 Natalia Corchón
       </p>
     </div>
   </footer>
+
+  <!-- JS para animaciones de aparición -->
+  <script>
+    // IntersectionObserver para elementos con clase "reveal"
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          // Si no quieres que desaparezcan al subir:
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
