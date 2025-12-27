@@ -70,7 +70,7 @@
       margin-top: 0;
     }
 
-    /* Formulario (ahora funcional con Formspree) */
+    /* Formulario (Formspree) */
     form {
       margin-top: 1rem;
       display: flex;
@@ -188,7 +188,7 @@
           <strong>natalia.corchon.ruiz@gmail.com</strong>.
         </p>
 
-        <!-- IMPORTANTE: cambia TU_ID_DE_FORM por el ID real de Formspree -->
+        <!-- Formulario con redirección a tu propia página -->
         <form action="https://formspree.io/f/xpqzzged" method="POST">
           <input type="text" name="nombre" placeholder="Nombre" required>
           <input type="email" name="_replyto" placeholder="Correo electrónico" required>
@@ -199,6 +199,9 @@
 
           <!-- Idioma de la respuesta de Formspree (opcional) -->
           <input type="hidden" name="_language" value="es">
+
+          <!-- Redirección tras enviar -->
+          <input type="hidden" name="_redirect" value="https://nataliacorchon.github.io/contacto.html">
 
           <button type="submit">Enviar</button>
         </form>
