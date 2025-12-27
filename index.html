@@ -7,7 +7,7 @@
 
   <style>
     html {
-      scroll-behavior: smooth; /* Scroll suave para anchors */
+      scroll-behavior: smooth;
     }
 
     body {
@@ -60,18 +60,57 @@
       color: #111827;
     }
 
-    /* Inicio / héroe */
+    /* HERO A PANTALLA COMPLETA */
     #inicio {
-      padding-top: 2rem;
-      text-align: left;
+      height: calc(100vh - 56px); /* alto ventana menos barra */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 3rem 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
     }
     #inicio h2 {
-      font-size: 2rem;
+      font-size: 2.6rem;
       margin-bottom: 0.5rem;
     }
     #inicio p {
       margin: 0.2rem 0;
-      color: #4b5563;
+      color: #e5e7eb;
+      max-width: 520px;
+    }
+    #inicio {
+      background: linear-gradient(135deg, #111827 0%, #1f2937 40%, #f97316 100%);
+      color: #ffffff;
+      border-bottom-left-radius: 1.5rem;
+      border-bottom-right-radius: 1.5rem;
+    }
+    .hero-name {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+      color: #e5e7eb;
+    }
+    .hero-button {
+      margin-top: 1.5rem;
+    }
+    .hero-button a {
+      display: inline-block;
+      padding: 0.7rem 1.6rem;
+      border-radius: 999px;
+      background: #f97316;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    .hero-button a:hover {
+      background: #fb923c;
     }
 
     /* Acerca de mí */
@@ -186,6 +225,10 @@
     }
 
     @media (max-width: 640px) {
+      #inicio {
+        align-items: flex-start;
+        text-align: left;
+      }
       header {
         flex-direction: column;
         align-items: flex-start;
@@ -207,17 +250,21 @@
       <a href="#inicio">Inicio</a>
       <a href="#acerca">Acerca de mí</a>
       <a href="#curriculum">Currículum</a>
-      <!-- <a href="#contacto">Contacto</a> -->
       <a href="contacto.html">Contacto</a>
     </nav>
   </header>
 
   <main>
-    <!-- INICIO -->
+    <!-- HERO A PANTALLA COMPLETA -->
     <section id="inicio">
-      <h2>Estudiante de Ingeniería y Sistemas de Datos</h2>
-      <p>Apasionada por la ingeniería de datos, el aprendizaje automático y la comunicación técnica.</p>
-      <p>En esta página integro mi currículum, vídeo‑CV, redes y proyectos como parte de mi marca personal.</p>
+      <div class="hero-name">Hola, soy Natalia Corchón</div>
+      <div class="hero-subtitle">Estudiante de Ingeniería y Sistemas de Datos</div>
+      <p>
+        Interesada en ingeniería de datos, aprendizaje automático y en contar historias claras con los datos.
+      </p>
+      <div class="hero-button">
+        <a href="#acerca">Saber más sobre mí</a>
+      </div>
     </section>
 
     <!-- ACERCA DE MÍ -->
@@ -311,18 +358,14 @@
 
   <!-- JS para animaciones de aparición -->
   <script>
-    // IntersectionObserver para elementos con clase "reveal"
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          // Si no quieres que desaparezcan al subir:
           observer.unobserve(entry.target);
         }
       });
-    }, {
-      threshold: 0.2
-    });
+    }, { threshold: 0.2 });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
