@@ -5,7 +5,7 @@
   <title>Natalia Corchón - Estudiante de Ingeniería y Sistemas de Datos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Fonts: Poppins -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -65,7 +65,7 @@
       color: #111827;
     }
 
-    /* HERO A PANTALLA COMPLETA Y A TODO EL ANCHO */
+    /* INICIO */
     #inicio {
       min-height: calc(100vh - 56px);
       display: flex;
@@ -86,11 +86,11 @@
       color: #ffffff;
     }
     .hero-name {
-      font-size: 3.4rem;   /* más grande */
+      font-size: 3.4rem; 
       font-weight: 700;
     }
     .hero-subtitle {
-      font-size: 1.2rem;   /* también un poco mayor */
+      font-size: 1.2rem;   
       margin-top: 0.6rem;
       margin-bottom: 1.7rem;
       color: #e5e7eb;
@@ -113,6 +113,9 @@
     }
 
     /* Acerca de mí */
+    #acerca {
+      padding-top: 4rem;
+    }
     .about-wrapper {
       display: flex;
       flex-wrap: wrap;
@@ -128,7 +131,7 @@
     }
     .about-photo img {
       max-width: 220px;
-      border-radius: 0.75rem; /* esquinas redondeadas, no círculo */
+      border-radius: 0.75rem;
       border: 3px solid #e5e7eb;
     }
 
@@ -228,7 +231,6 @@
       height: 24px;
     }
 
-    /* ANIMACIÓN aparición al hacer scroll */
     .reveal {
       opacity: 0;
       transform: translateY(20px);
@@ -269,7 +271,6 @@
   </header>
 
   <main>
-    <!-- HERO A PANTALLA COMPLETA -->
     <section id="inicio">
       <div class="hero-name">Natalia Corchón Ruiz</div>
       <div class="hero-subtitle">Estudiante de Ingeniería y Sistemas de Datos</div>
@@ -361,7 +362,6 @@
     </div>
   </footer>
 
-  <!-- JS para animaciones de aparición -->
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
