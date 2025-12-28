@@ -169,16 +169,12 @@
       margin: 0.25rem 0;
     }
 
-    /* ICONOS REDES */
+    /* ICONOS REDES EN CONTACTO */
     .social-icons {
       margin-top: 0.5rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
-    }
-    .social-icons a {
-      display: inline-block;
-      margin-right: 0.6rem;
     }
     .social-icons img {
       width: 26px;
@@ -191,6 +187,16 @@
       color: #f9fafb;
       padding: 2.5rem 1.5rem;
       text-align: center;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+    }
+    .footer-center {
+      max-width: 1000px;
+      margin: 0 auto;
     }
     .footer-center h3 {
       margin-top: 0;
@@ -210,7 +216,14 @@
       font-size: 0.9rem;
       color: #9ca3af;
     }
-    .footer .social-icons img {
+
+    .footer-icons {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+    .footer-icons img {
       width: 24px;
       height: 24px;
     }
@@ -251,7 +264,7 @@
       <a href="#inicio">Inicio</a>
       <a href="#acerca">Acerca de mí</a>
       <a href="#curriculum">Currículum</a>
-      <a href="contacto.html">Contacto</a>
+      <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
@@ -315,26 +328,26 @@
       <h2>Contacto</h2>
       <div class="contact-inline reveal">
         <p><strong>Email:</strong> natalia.corchon.ruiz@gmail.com</p>
-    
+
         <div class="social-icons">
           <img src="icon_linkedin.png" alt="LinkedIn de Natalia Corchón">
           <span>linkedin.com/in/nataliacorchonruiz</span>
         </div>
-    
+
         <div class="social-icons">
           <img src="icon_github.png" alt="GitHub de Natalia Corchón">
           <span>github.com/nataliacorchon</span>
         </div>
       </div>
     </section>
-
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-center">
       <h3>Natalia Corchón</h3>
       <p>Madrid, España</p>
-      <div class="social-icons reveal">
+      <div class="footer-icons reveal">
         <a href="https://www.linkedin.com/in/nataliacorchonruiz" target="_blank">
           <img src="icon_linkedin_2.png" alt="LinkedIn de Natalia Corchón">
         </a>
